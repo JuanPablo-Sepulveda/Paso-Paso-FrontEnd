@@ -1,0 +1,28 @@
+en esta carpeta aprendi a utilizar los metodos y bundler dentro de los webpacks, una mecanica muy buena para la organizacion y la perfeccion a la hora de escribir codigo limpio.
+en esta carpeta podemos ver como, mediante estos metodos, creo una paguina web que dentro de la consola muerstre los resultados de una SUMA. una suma que su funcion esta dentro de un archivo, y sus valores dentro de otra. teniendo un archivo bundler dentro de una webpack que los junta e invoca unicamente ese archivo para ejecutarlo dentro del archivo html.
+
+
+paso a paso sobre metodos bundler y webpack
+
+paso 1:
+-npm initial
+-npm install webpack webpack-cli
+
+paso 2: 
+-me dirigo al package.json
+-escribo el script ("build":"webpack")
+
+paso 3:
+-creo el archivo "webpack.config.js"
+-creo el modulo de exportacion 
+
+module.exports={
+  entry:"./carpeta/archivoEntrada.js",
+  output:{
+    path:__dirname +"/CarpetaQueCrea",
+    filename:" archivoQueCrea.js"
+  }
+}
+luego se ejecuta el comando npx webpack para activar la funcion del la exporttacion y crear una carpeta con un archivo bundler con toda la info que necesita el archivo html para leerlo y ejecutarlo sin problemas.
+
+//sin duda que fue uno de los metodos que mas me costo aprender pero la verdad que lo veo muy funcional a la hora de organizarte ya que suponte,hipoteticamente, que tenemos solo un script de un archivo javascript , seria bastante feo pareceria un boceto lleno de variables y funciones sin sentido. No digo que este mal ,creo que cuando aprendemos a programar es lo primero que nos enseñan con tal de que no cargemos tanta informacion a nuestra cabeza pero creo que la clave para un codigo mas limpio sin duda son los bundler ya que podemos tener mas de uno y definir funciones en un archivo,valores en otro archivo etc. la verdad me gusta.
